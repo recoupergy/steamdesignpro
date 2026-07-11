@@ -16,7 +16,13 @@ for (const record of data.officialCadAudit) {
 }
 
 async function walk(directory) {
-  const entries = await readdir(directory, { withFileTypes: true });
+  let entries;
+  try {
+    entries = await readdir(directory, { withFileTypes: true });
+  } catch (error) {
+    if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") return [];
+    throw error;
+  }
   const files = [];
   for (const entry of entries) {
     const absolute = path.join(directory, entry.name);
