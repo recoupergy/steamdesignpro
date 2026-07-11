@@ -1,0 +1,111 @@
+{
+  "retrievedAt": "2026-07-11",
+  "licenseReview": {
+    "sourceUrl": "https://www.kohler.com/en/legal",
+    "status": "not-authorized-for-commercial-derivative-redistribution",
+    "summary": "KOHLER's current site terms permit downloaded content for non-commercial personal use and prohibit public/commercial modification, reuse, or distribution without written permission.",
+    "productionDecision": "No official KOHLER CAD, image, or mesh is bundled, converted, or redistributed. Production geometry is an independently built, clearly non-official procedural proxy based only on published dimensions and product appearance."
+  },
+  "officialCadAudit": [
+    {
+      "model": "K-32309",
+      "product": "Linear steam head",
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32309_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "publishedDimensionsInches": { "width": 13.75, "height": 2.0625, "projection": 0.375 },
+      "formatsFound": ["OBJ", "3DS", "SKP", "3D DWG", "3D DXF", "RFA", "2D DWG", "2D DXF"],
+      "formatsNotFound": ["STEP", "IFC", "STL", "GLB", "GLTF"],
+      "sourcePattern": "https://techcomm.kohler.com/techcomm/cad/32309.{obj|3ds|skp|dxf|dwg}",
+      "auditedObj": { "vertices": 8048, "faceRecords": 8300, "triangles": 24376, "boundingSpanInches": [13.7378, 0.4296, 2.0272], "sha256": "f00d999b8f967b39839ab04323a359febcc10cc374d22e5602e0d27558093ec8" },
+      "checksumsSha256": {
+        "3ds": "ade72d5aa256e9d1431b00f25326f8d15338a6161ce40265c2735ddabe54407e",
+        "skp": "b9038a2efc9fef3137f87695b0ac9d4c7fdeab4c2fa6c90b66c5a0727955c041",
+        "dxf3d": "7337f471126eedd289304e6a8a1c85bf0d99be1c4b350d641527b6b5ff508d63",
+        "dwg3d": "895cedf8b19c077be81004ba49e95f46ed5a5956714f6e6c1c48b58f8f066f89",
+        "revitZip": "0c02c68d2836b5600e575288bcc8d17068a800f7323313258b3556277428b1de"
+      },
+      "conversion": "not-performed-license-restricted"
+    },
+    {
+      "model": "K-32310",
+      "product": "Square steam head",
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32310_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "publishedDimensionsInches": { "width": 3, "height": 3, "projection": 0.75 },
+      "formatsFound": ["OBJ", "3DS", "SKP", "3D DWG", "3D DXF", "RFA", "2D DWG", "2D DXF"],
+      "formatsNotFound": ["STEP", "IFC", "STL", "GLB", "GLTF"],
+      "sourcePattern": "https://techcomm.kohler.com/techcomm/cad/32310.{obj|3ds|skp|dxf|dwg}",
+      "auditedObj": { "vertices": 10177, "faceRecords": 10579, "triangles": 30921, "boundingSpanInches": [2.98, 0.7594, 2.98], "sha256": "23a70c07c5c00f88fff8d88b50c5c91a589576f66c36def95c3e2e0a7b680e35" },
+      "checksumsSha256": {
+        "3ds": "2c81ca824cb650f0260ac6b5d49f6a5d0e9c7734d7b3427be45907a9b9e0367b",
+        "skp": "e7e5442d6f8f7fd6dbdc96ac145f3ad460a9f868603e9bcbc5a92f8fc7a54a7f",
+        "dxf3d": "8b75a9b561b463b8a93033e8149cf68bbdd87bffc6dce1d1ae81527b96973894",
+        "dwg3d": "36c7c92868ab335d575d45ae6bb1c8421ff8a86d7d9045440f6f814b15dd6f92",
+        "revitZip": "7cb98b5cda78ab8234580af063bd50f5b5637fdc8718396101e4c3d25aa57cbf"
+      },
+      "conversion": "not-performed-license-restricted"
+    },
+    {
+      "model": "K-32311",
+      "product": "Digital steam adapter",
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32311_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "publishedDimensionsInches": { "width": 4, "height": 3.25, "projection": 0.125 },
+      "formatsFound": ["OBJ", "3DS", "SKP", "3D DWG", "3D DXF", "RFA", "2D DWG", "2D DXF"],
+      "formatsNotFound": ["STEP", "IFC", "STL", "GLB", "GLTF"],
+      "sourcePattern": "https://techcomm.kohler.com/techcomm/cad/32311.{obj|3ds|skp|dxf|dwg}",
+      "auditedObj": { "vertices": 4659, "faceRecords": 4897, "triangles": 14207, "boundingSpanInches": [4.9725, 1.0984, 4.0078], "sha256": "03e14a504227879cb806c43e07e616e18a864984167b3ce70a78c2ed3b4adc67" },
+      "checksumsSha256": {
+        "3ds": "7376d6a9c4d1854ed703eaf57b827a9d83dfd1b71d43d10ba473736fde083a47",
+        "skp": "7b433b6d8fb4a48b97e8dd5583d68328cbbb51021589a0f72ef31da97ce4cbc1",
+        "dxf3d": "9c59c0b01ff35e1897a1783bb1b46114ce939542ba6e145d1484f705964d0852",
+        "dwg3d": "0ae39d3b2a52d5eb5b0ff1b4d289f1319287e4e576201f555cbfa740a44c7f68",
+        "revitZip": "f862ba7360faf0f230bde798ac4511fa93067dc3635cd6ff7d07d0bcc87da24f"
+      },
+      "conversion": "not-performed-license-restricted"
+    },
+    {
+      "model": "K-32312",
+      "product": "Steam controller",
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32312_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "publishedDimensionsInches": { "width": 4, "height": 3.25, "projection": 1 },
+      "formatsFound": ["OBJ", "3DS", "SKP", "3D DWG", "3D DXF", "RFA", "2D DWG", "2D DXF"],
+      "formatsNotFound": ["STEP", "IFC", "STL", "GLB", "GLTF"],
+      "sourcePattern": "https://techcomm.kohler.com/techcomm/cad/32312.{obj|3ds|skp|dxf|dwg}",
+      "auditedObj": { "vertices": 2232, "faceRecords": 2280, "triangles": 6470, "boundingSpanInches": [3.245, 0.9843, 3.993], "sha256": "efb282a6bb7880f7dd8290635768a1b96c935e0cfcddf1bd4f355818476d74ed" },
+      "checksumsSha256": {
+        "3ds": "ce90159f39514f71bae70cac348c1dd66314ee61d5f5fb6829ce1f6abd9e1197",
+        "skp": "78e8de77bea2d3604a5db5da19c441e695f35a31263272a423d6a3a438a9a800",
+        "dxf3d": "8c6770b858f0bee1b25692ab72c0216c09d27a361c8866550b9047dd518ff02f",
+        "dwg3d": "471c5eafcbe3b79734e4ac5fa965e05b504f677c592de5f23cd1c3649efae667",
+        "revitZip": "f6e6c60945136104a432f2f76eb3c09bd8a2e30aea4cc68d82e1e778835b1c57"
+      },
+      "conversion": "not-performed-license-restricted"
+    }
+  ],
+  "generatorAssets": {
+    "models": ["K-32324-NA", "K-32325-NA", "K-32326-NA", "K-32327-NA", "K-32328-NA", "K-32329-NA", "K-32332-NA", "K-32333-NA", "K-32334-NA", "K-32335-NA"],
+    "studioKohlerExampleUrl": "https://www.studiokohler.com/en-us/steam-generators/32324",
+    "availableOfficialFormat": "RFA",
+    "browserReadyFormatFound": false,
+    "productionRepresentation": "Separate schematic generator-location SVG; not an official product model."
+  },
+  "productionProceduralAsset": {
+    "sourceFile": "src/components/planner/steam-room-canvas.tsx",
+    "revision": "procedural-v1",
+    "officialCad": false,
+    "dimensions": "Room geometry follows planner inches at 12 inches per scene unit. K-32309 and K-32310 visible faces use current specification dimensions. Controller proxy uses the current 4 by 3.25 inch face envelope.",
+    "materials": ["white ceramic tile", "clear glass", "generic chrome", "charcoal control screen"],
+    "textures": 0,
+    "lodStrategy": "Procedural low-segment primitives, capped 1.75 DPR, demand rendering, offscreen pause; no separate mesh LOD files are needed for the current polygon budget.",
+    "polygonCountMethod": "Captured from THREE.WebGLRenderer.info.render.triangles in the default desktop Playwright scene.",
+    "defaultRenderedTriangles": 2374,
+    "conversionSteps": [
+      "Read published dimensions from current KOHLER specification drawings.",
+      "Create independent primitive geometry in feet-based scene units with wall-mounted origins.",
+      "Use low segment counts and omit hidden internal components.",
+      "Verify published dimensions and scene-unit conversion in unit tests; verify framing, visible pixels, and motion in browser tests."
+    ]
+  }
+}

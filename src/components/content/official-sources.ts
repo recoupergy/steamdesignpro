@@ -1,0 +1,30 @@
+export const OFFICIAL_SOURCES = {
+  calculator:
+    "https://www.kohler.com/en/products/showers/steam-calculator",
+  generatorCatalog:
+    "https://www.kohler.com/en/shop/steam-generators-for-home-use",
+  steamCatalog:
+    "https://www.kohler.com/en/products/showers/shop-steam-showering?facets=Collections%3AInvigoration",
+  selectionGuide:
+    "https://www.kohler.com/content/dam/kohler-com-NA/Lifestyle/PDP-PDF/PDP-PDF-22-3187-0824-select-your-controller-and-steam-head.pdf",
+  generator5to11Instructions:
+    "https://techcomm.kohler.com/techcomm/pdf/1601844-2.pdf",
+  generator13to15Instructions:
+    "https://techcomm.kohler.com/techcomm/pdf/1601845-2.pdf",
+  digitalAdapterInstructions:
+    "https://techcomm.kohler.com/techcomm/pdf/1581267-2.pdf",
+  steamHeadInstructions:
+    "https://techcomm.kohler.com/techcomm/pdf/1069332-2.pdf",
+  technicalResources:
+    "https://www.studiokohler.com/en-us/resources/technical-specifications",
+  generator5kw:
+    "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-5-kw-steam-generator-32324",
+  generator11kw:
+    "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-11-kw-steam-generator-32327",
+  generator22kw:
+    "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-22-kw-steam-generator-32333",
+  generator30kw:
+    "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-30-kw-steam-generator-32335?skuId=32335-NA",
+  generator30kwSpec:
+    "https://techcomm.kohler.com/techcomm/pdf/K-32335_spec_US-CA_Kohler_en.pdf",
+} as const;

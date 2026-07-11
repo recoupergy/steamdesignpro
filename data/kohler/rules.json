@@ -1,0 +1,67 @@
+{
+  "manufacturer": "KOHLER",
+  "series": "Invigoration Series",
+  "retrievedAt": "2026-07-11",
+  "recommendedCeilingMaxFt": 8,
+  "documentedCeilingMaxFt": 10,
+  "maxSupportedVolumeCuFt": 1000,
+  "maxGeneratorToSteamHeadFt": 25,
+  "steamHeadHeightInches": 6,
+  "controllerHeightInches": 60,
+  "generatorClearanceInches": 6,
+  "surfaceMaterialMultiplier": null,
+  "fractionalFootPolicy": "conservative-ceil-with-review",
+  "manufacturerGfciInstruction": "Typical two-pole circuit breaker without GFCI; all wiring must comply with local codes.",
+  "sources": [
+    {
+      "field": "baseVolumeAndCeilingRule",
+      "sourceUrl": "https://www.studiokohler.com/content/dam/kohler-kds/PDP-PDF-22-3187-0824-select-your-controller-and-steam-head.pdf",
+      "title": "Select Your Controller and Steam Head",
+      "revision": "Form 22-3187-0824",
+      "sourceDate": "2024-08",
+      "page": 1,
+      "quote": "Recommended ceiling height is 8 feet or less. For each foot above 8 feet, you must upgrade to the next steam generator size."
+    },
+    {
+      "field": "distanceAndElectrical",
+      "sourceUrl": "https://www.studiokohler.com/content/dam/kohler-kds/PDP-PDF-22-3187-0824-select-your-controller-and-steam-head.pdf",
+      "title": "Select Your Controller and Steam Head",
+      "revision": "Form 22-3187-0824",
+      "sourceDate": "2024-08",
+      "page": 1,
+      "quote": "The steam generator needs to be installed within 25 feet of the steam head. A separate, dedicated 240 V circuit is required. No GFCI should be connected to this circuit."
+    },
+    {
+      "field": "documentedCeilingAndPlacement",
+      "sourceUrl": "https://techcomm.kohler.com/techcomm/pdf/1601844-2.pdf",
+      "title": "Steam Generator (5 kW - 11 kW) Installation Instructions",
+      "revision": "1601844-2-B",
+      "sourceDate": null,
+      "page": 7,
+      "quote": "Recommended ceiling height is 8' (2.4 m) or less. Maximum ceiling height is 10' (3 m)."
+    },
+    {
+      "field": "clearance",
+      "sourceUrl": "https://techcomm.kohler.com/techcomm/pdf/1601845-2.pdf",
+      "title": "Steam Generator (13 kW - 15 kW) Installation Instructions",
+      "revision": "1601845-2-B",
+      "sourceDate": null,
+      "page": 11,
+      "quote": "A minimum air gap of 6 inches (152 mm) must be provided around the steam generator on at least three sides."
+    },
+    {
+      "field": "controlAndSteamHeadPlacement",
+      "sourceUrl": "https://techcomm.kohler.com/techcomm/pdf/1601844-2.pdf",
+      "title": "Steam Generator (5 kW - 11 kW) Installation Instructions",
+      "revision": "1601844-2-B",
+      "sourceDate": null,
+      "page": 8,
+      "quote": "Position the steam head(s) 6 inches (152 mm) above the shower floor. Position the steam control user interface 60 inches (1524 mm) above the shower floor."
+    }
+  ],
+  "assumptions": [
+    "Current KOHLER sources do not explicitly define fractional-foot rounding. This planner conservatively rounds each started foot above 8 feet upward and flags partial feet for manufacturer review.",
+    "Current KOHLER sources do not publish a surface-material sizing multiplier, so finish does not alter generator sizing.",
+    "The no-GFCI statement is displayed only as a manufacturer instruction and must be reconciled with current local code by a licensed electrician."
+  ]
+}

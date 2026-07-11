@@ -1,0 +1,181 @@
+{
+  "manufacturer": "KOHLER",
+  "series": "Invigoration Series",
+  "retrievedAt": "2026-07-11",
+  "selectionSource": {
+    "title": "Select Your Controller and Steam Head",
+    "sourceUrl": "https://www.studiokohler.com/content/dam/kohler-kds/PDP-PDF-22-3187-0824-select-your-controller-and-steam-head.pdf",
+    "revision": "Form 22-3187-0824",
+    "sourceDate": "2024-08",
+    "page": 1,
+    "quote": "If you are adding a steam generator to a mechanical shower, choose from K-5557, K-5558, and K-32312 controllers. If you are adding a steam generator to an Anthem+ or DTV+ digital shower, choose from K-5548-K1, K-5549-K1, and K-32311 controllers."
+  },
+  "finishLabels": {
+    "CP": "Polished Chrome",
+    "SN": "Vibrant Polished Nickel",
+    "AF": "Vibrant French Gold",
+    "BN": "Vibrant Brushed Nickel",
+    "BV": "Vibrant Brushed Bronze",
+    "BL": "Matte Black",
+    "2MB": "Vibrant Brushed Moderne Brass",
+    "TT": "Vibrant Titanium",
+    "BGP": "Vibrant Brushed Graphite",
+    "DR": "Deep Bronze"
+  },
+  "controls": [
+    {
+      "sku": "K-5557",
+      "name": "Steam generator control kit",
+      "kind": "control-kit",
+      "showerSystems": ["mechanical"],
+      "configurations": ["single"],
+      "headStyles": ["round"],
+      "includedHeadCount": 1,
+      "compatibleHeadSkus": [],
+      "specFinishCodes": ["CP", "SN", "BN", "BV", "BL", "2MB", "TT", "BGP", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-steam-generator-control-kit-5557?skuId=5557-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-5557-CP, K-5557-SN, K-5557-BN, K-5557-BV, K-5557-BL, K-5557-2MB, and K-5557-TT."
+      },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-5557_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "7-03-2026 03:45 - US-CA",
+      "provenance": "Includes control panel and one thermostatic round steam head with aromatherapy reservoir."
+    },
+    {
+      "sku": "K-5558",
+      "name": "Tandem steam generator control kit",
+      "kind": "control-kit",
+      "showerSystems": ["mechanical"],
+      "configurations": ["tandem"],
+      "headStyles": ["round"],
+      "includedHeadCount": 2,
+      "compatibleHeadSkus": [],
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "BGP", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-tandem-steam-generator-control-kit-5558?skuId=5558-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-5558-CP, K-5558-SN, K-5558-AF, K-5558-BN, K-5558-BV, K-5558-BL, K-5558-2MB, and K-5558-TT."
+      },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-5558_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "7-03-2026 03:30 - US-CA",
+      "provenance": "Two thermostatic steam heads with aromatherapy reservoirs."
+    },
+    {
+      "sku": "K-32312",
+      "name": "Steam controller",
+      "kind": "controller",
+      "showerSystems": ["mechanical"],
+      "configurations": ["single", "tandem"],
+      "headStyles": ["square", "linear"],
+      "includedHeadCount": 0,
+      "compatibleHeadSkus": ["K-32309", "K-32310"],
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-steam-controller-32312?skuId=32312-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-32312-CP, K-32312-SN, K-32312-AF, K-32312-BN, K-32312-BV, K-32312-BL, K-32312-2MB, and K-32312-TT."
+      },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32312_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "provenance": "Pairs with a square or linear steam head, sold separately. Tandem steam generators require two steam heads."
+    },
+    {
+      "sku": "K-5548-K1",
+      "name": "Digital steam adapter kit",
+      "kind": "digital-adapter-kit",
+      "showerSystems": ["anthem-plus", "dtv-plus"],
+      "configurations": ["single"],
+      "headStyles": ["round"],
+      "includedHeadCount": 1,
+      "compatibleHeadSkus": [],
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "BGP", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-digital-steam-adapter-kit-5548-k1-5548-k1?skuId=5548-K1-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-5548-K1-CP, K-5548-K1-SN, K-5548-K1-AF, K-5548-K1-BN, K-5548-K1-BV, K-5548-K1-BL, K-5548-K1-2MB, and K-5548-K1-TT."
+      },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-5548-K1_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "7-02-2026 22:48 - US-CA",
+      "provenance": "Includes one steam head, temperature sensor, and adapter for Anthem+ or DTV+ digital showers."
+    },
+    {
+      "sku": "K-5549-K1",
+      "name": "Tandem digital steam adapter kit",
+      "kind": "digital-adapter-kit",
+      "showerSystems": ["anthem-plus", "dtv-plus"],
+      "configurations": ["tandem"],
+      "headStyles": ["round"],
+      "includedHeadCount": 2,
+      "compatibleHeadSkus": [],
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "BGP", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-tandem-digital-steam-adapter-kit-5549-k1-5549-k1?skuId=5549-K1-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-5549-K1-CP, K-5549-K1-SN, K-5549-K1-AF, K-5549-K1-BN, K-5549-K1-BV, K-5549-K1-BL, K-5549-K1-2MB, and K-5549-K1-TT."
+      },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-5549-K1_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "7-02-2026 21:54 - US-CA",
+      "provenance": "Includes two steam heads, temperature sensor, and adapter for Anthem+ or DTV+ digital showers."
+    },
+    {
+      "sku": "K-32311",
+      "name": "Digital steam adapter",
+      "kind": "digital-adapter",
+      "showerSystems": ["anthem-plus", "dtv-plus"],
+      "configurations": ["single", "tandem"],
+      "headStyles": ["square", "linear"],
+      "includedHeadCount": 0,
+      "compatibleHeadSkus": ["K-32309", "K-32310"],
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-digital-steam-adapter-32311?skuId=32311-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-32311-CP, K-32311-SN, K-32311-AF, K-32311-BN, K-32311-BV, K-32311-BL, K-32311-2MB, and K-32311-TT."
+      },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32311_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "provenance": "Pairs with a square or linear steam head, sold separately. Tandem steam generators require two steam heads."
+    }
+  ],
+  "steamHeads": [
+    {
+      "sku": "K-32309",
+      "name": "Linear steam head",
+      "style": "linear",
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-linear-steam-head-32309?skuId=32309-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-32309-CP, K-32309-SN, K-32309-AF, K-32309-BN, K-32309-BV, K-32309-BL, K-32309-2MB, and K-32309-TT."
+      },
+      "dimensionsInches": { "width": 13.75, "height": 2.0625, "projection": 0.375 },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32309_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "provenance": "13-3/4 in face width; 2-1/16 in face height; 3/8 in projection; 1/2-14-2B NPT."
+    },
+    {
+      "sku": "K-32310",
+      "name": "Square steam head",
+      "style": "square",
+      "specFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT", "DR"],
+      "pdpFinishCodes": ["CP", "SN", "AF", "BN", "BV", "BL", "2MB", "TT"],
+      "pdpFinishSource": {
+        "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-square-steam-head-32310?skuId=32310-CP",
+        "retrievedAt": "2026-07-11",
+        "quote": "Orderable variants shown: K-32310-CP, K-32310-SN, K-32310-AF, K-32310-BN, K-32310-BV, K-32310-BL, K-32310-2MB, and K-32310-TT."
+      },
+      "dimensionsInches": { "width": 3, "height": 3, "projection": 0.75 },
+      "specUrl": "https://techcomm.kohler.com/techcomm/pdf/K-32310_spec_US-CA_Kohler_en.pdf",
+      "specRevision": "6-29-2026 20:50 - US-CA",
+      "provenance": "3 in square face; 3/4 in projection; 2-5/8 in overall depth; 1/2-14 NPT."
+    }
+  ]
+}

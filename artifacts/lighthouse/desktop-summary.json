@@ -1,0 +1,19 @@
+{
+  "url": "http://127.0.0.1:3108/?v=1&s=eyJ2ZXJzaW9uIjoxLCJ1bml0cyI6InVzIiwid2lkdGhJbmNoZXMiOjYwLCJkZXB0aEluY2hlcyI6NDgsImhlaWdodEluY2hlcyI6OTYsImRvb3JXYWxsIjoic291dGgiLCJkb29yU3dpbmciOiJvdXQtbGVmdCIsImRvb3JXaWR0aEluY2hlcyI6MjgsImdsYXNzV2FsbHMiOlsic291dGgiLCJlYXN0Il0sImJlbmNoIjp7InR5cGUiOiJmbG9hdGluZyIsIndhbGwiOiJub3J0aCIsIndpZHRoSW5jaGVzIjozNiwiZGVwdGhJbmNoZXMiOjE4LCJoZWlnaHRJbmNoZXMiOjE4fSwic2hvd2VyVHlwZSI6Im1lY2hhbmljYWwiLCJzdXJmYWNlTWF0ZXJpYWwiOiJwb3JjZWxhaW4tY2VyYW1pYy10aWxlIiwic3RlYW1IZWFkU3R5bGUiOiJyb3VuZCIsInN0ZWFtSGVhZFdhbGwiOiJ3ZXN0Iiwic3RlYW1IZWFkUG9zaXRpb24iOjAuMjgsInNlY29uZGFyeVN0ZWFtSGVhZFdhbGwiOiJlYXN0Iiwic2Vjb25kYXJ5U3RlYW1IZWFkUG9zaXRpb24iOjAuMywiY29udHJvbGxlcldhbGwiOiJlYXN0IiwiY29udHJvbGxlclBvc2l0aW9uIjowLjY0LCJmaXh0dXJlV2FsbCI6Im5vcnRoIiwiZml4dHVyZVBvc2l0aW9uIjowLjcyLCJjZWlsaW5nU2xvcGVEaXJlY3Rpb24iOiJub25lIiwiY2VpbGluZ1Nsb3BlRHJvcEluY2hlcyI6MCwiZ2VuZXJhdG9yTG9jYXRpb24iOiJhZGphY2VudC1jbG9zZXQiLCJnZW5lcmF0b3JEaXN0YW5jZUZ0IjoxMiwiZmluaXNoIjoiQ1AiLCJleHRlcmlvcldhbGxOb3RlcyI6IiIsIndpbmRvd05vdGVzIjoiIn0",
+  "mode": "desktop",
+  "generatedAt": "2026-07-11T20:57:12.999Z",
+  "scores": {
+    "performance": 86,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "firstContentfulPaintMs": 795.1795,
+    "largestContentfulPaintMs": 2457.3589999999995,
+    "totalBlockingTimeMs": 2.5,
+    "cumulativeLayoutShift": 0,
+    "speedIndexMs": 795.1795
+  },
+  "note": "Lighthouse is a lab test. Total Blocking Time is reported as an interactivity proxy; field INP requires real-user measurement."
+}
