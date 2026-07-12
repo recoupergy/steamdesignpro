@@ -86,18 +86,29 @@ export function PlannerShell() {
 
   useEffect(() => {
     if (!hydrated) return;
-    const timeout = window.setTimeout(() => {
+    const saveLocally = () => {
       try {
         window.localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(state));
       } catch {
         // Private browsing or storage policy may disable autosave; URL state still works.
       }
+    };
+    const syncUrl = () => {
       const path = sharePathForState(state);
       if (`${window.location.pathname}${window.location.search}` !== path) {
         window.history.replaceState(window.history.state, "", path);
       }
+    };
+    const timeout = window.setTimeout(() => {
+      saveLocally();
+      syncUrl();
     }, 300);
-    return () => window.clearTimeout(timeout);
+    window.addEventListener("pagehide", saveLocally);
+    return () => {
+      window.clearTimeout(timeout);
+      window.removeEventListener("pagehide", saveLocally);
+      saveLocally();
+    };
   }, [hydrated, state]);
 
   useEffect(() => {

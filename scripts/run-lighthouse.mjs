@@ -3,8 +3,9 @@ import path from "node:path";
 import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
 
-const url = process.env.LIGHTHOUSE_URL ?? "http://127.0.0.1:3108/?v=1&starter=compact";
+const url = process.env.LIGHTHOUSE_URL ?? "http://127.0.0.1:3108/";
 const mode = process.env.LIGHTHOUSE_MODE === "desktop" ? "desktop" : "mobile";
+const artifactPrefix = (process.env.LIGHTHOUSE_ARTIFACT_PREFIX ?? mode).replace(/[^a-z0-9-]/gi, "-");
 const outputDirectory = path.join(process.cwd(), "artifacts", "lighthouse");
 await mkdir(outputDirectory, { recursive: true });
 
@@ -29,8 +30,8 @@ try {
   if (!result) throw new Error("Lighthouse did not return a report.");
   const [jsonReport, htmlReport] = result.report;
   if (typeof jsonReport !== "string" || typeof htmlReport !== "string") throw new Error("Unexpected Lighthouse report output.");
-  await writeFile(path.join(outputDirectory, `${mode}.json`), jsonReport);
-  await writeFile(path.join(outputDirectory, `${mode}.html`), htmlReport);
+  await writeFile(path.join(outputDirectory, `${artifactPrefix}.json`), jsonReport);
+  await writeFile(path.join(outputDirectory, `${artifactPrefix}.html`), htmlReport);
 
   const { lhr } = result;
   const categoryScore = (id) => Math.round((lhr.categories[id]?.score ?? 0) * 100);
@@ -54,7 +55,7 @@ try {
     },
     note: "Lighthouse is a lab test. Total Blocking Time is reported as an interactivity proxy; field INP requires real-user measurement.",
   };
-  await writeFile(path.join(outputDirectory, `${mode}-summary.json`), `${JSON.stringify(summary, null, 2)}\n`);
+  await writeFile(path.join(outputDirectory, `${artifactPrefix}-summary.json`), `${JSON.stringify(summary, null, 2)}\n`);
   console.log(JSON.stringify(summary, null, 2));
 
   if ((summary.metrics.largestContentfulPaintMs ?? Infinity) > 2500) process.exitCode = 2;

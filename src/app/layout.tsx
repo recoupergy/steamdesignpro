@@ -44,7 +44,7 @@ export default function RootLayout({
         <SiteHeader />
         <div className="site-content" id="main-content" tabIndex={-1}>{children}</div>
         <SiteFooter />
-        <Analytics />
+        {process.env.VERCEL ? <Analytics /> : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

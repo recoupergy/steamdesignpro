@@ -15,7 +15,7 @@ export function PlannerCta({
         <h2 id="planner-cta-title">{title}</h2>
         <p>{description}</p>
       </div>
-      <Link className="button-link button-link--primary" href="/?v=1&starter=compact">
+      <Link className="button-link button-link--primary" href="/design?v=1&starter=compact">
         Open compact starter plan
       </Link>
     </aside>

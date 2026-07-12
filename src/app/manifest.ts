@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "SteamDesignPro",
     short_name: "SteamDesignPro",
     description: "Browser-based steam-shower planning workspace by SaunaShare, Inc.",
-    start_url: "/",
+    start_url: "/design",
     display: "standalone",
     background_color: "#f4f8f8",
     theme_color: "#10383a",

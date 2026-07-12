@@ -28,7 +28,7 @@ function Breadcrumbs({ items }: { items: Breadcrumb[] }) {
     <nav className="breadcrumbs" aria-label="Breadcrumb">
       <ol>
         <li>
-          <Link href="/">Planner</Link>
+          <Link href="/">Home</Link>
         </li>
         {items.map((item) => (
           <li key={item.label} aria-current={item.href ? undefined : "page"}>
@@ -50,7 +50,7 @@ function BreadcrumbStructuredData({
   items: Breadcrumb[];
   path: `/${string}`;
 }) {
-  const allItems = [{ label: "Planner", href: "/" as const }, ...items];
+  const allItems = [{ label: "Home", href: "/" as const }, ...items];
   const data = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

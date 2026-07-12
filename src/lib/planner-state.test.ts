@@ -7,7 +7,7 @@ import {
   inputDistanceToFeet,
   inputLengthToInches,
 } from "./planner-schema";
-import { decodePlannerState, encodePlannerState, stateFromSearchParams } from "./planner-url";
+import { decodePlannerState, encodePlannerState, sharePathForState, stateFromSearchParams } from "./planner-url";
 
 describe("unit conversion", () => {
   it.each([0, 1, 42, 96, 143.75])("round-trips %s inches through metric", (inches) => {
@@ -35,6 +35,10 @@ describe("versioned URL state", () => {
     const state = stateFromSearchParams(new URLSearchParams("v=1&starter=compact"));
     expect(state.widthInches).toBe(48);
     expect(state.bench.type).toBe("none");
+  });
+
+  it("keeps versioned share state on the designer route", () => {
+    expect(sharePathForState(DEFAULT_PLANNER_STATE)).toMatch(/^\/design\?v=1&s=/);
   });
 });
 

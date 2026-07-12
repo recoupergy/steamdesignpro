@@ -1,6 +1,9 @@
 import { expect, test } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import path from "node:path";
 
 const routes = [
+  ["/design", "Plan the enclosure"],
   ["/guide", "Plan the room before"],
   ["/kohler", "Current KOHLER Invigoration"],
   ["/kohler/k-32324-na", "K-32324-NA"],
@@ -13,12 +16,51 @@ const routes = [
 ] as const;
 
 test.describe("crawlable routes and metadata", () => {
+  test("landing page is server-rendered with a direct designer CTA", async ({ page }, testInfo) => {
+    const response = await page.goto("/");
+    expect(response?.status()).toBe(200);
+    await expect(page.getByRole("heading", { level: 1, name: /see your steam shower before the tile goes up/i })).toBeVisible();
+    await expect(page.getByRole("link", { name: /design now/i }).first()).toHaveAttribute("href", "/design");
+    await expect(page.locator("link[rel='canonical']")).toHaveAttribute("href", "https://steamdesignpro.com");
+    await expect(page.locator("meta[property='og:type']")).toHaveAttribute("content", "website");
+    await expect(page.locator("meta[property='og:site_name']")).toHaveAttribute("content", "SteamDesignPro");
+    await expect(page.locator("meta[property='og:image']").first()).toHaveAttribute("content", "https://steamdesignpro.com/opengraph-image");
+    await expect(page.locator("meta[name='twitter:image']").first()).toHaveAttribute("content", "https://steamdesignpro.com/opengraph-image");
+    await page.locator(".landing-hero").screenshot({
+      path: path.join(process.cwd(), "artifacts", "screenshots", `landing-${testInfo.project.name}.png`),
+    });
+    const accessibility = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
+    expect(accessibility.violations).toEqual([]);
+  });
+
+  test("landing page stays inside a 320px viewport", async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== "mobile", "The narrow-width regression runs once with mobile browser behavior.");
+    await page.setViewportSize({ width: 320, height: 760 });
+    await page.goto("/");
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    expect(overflow).toBeLessThanOrEqual(1);
+    await expect(page.getByRole("link", { name: "Design now", exact: true }).first()).toBeVisible();
+  });
+
+  test("legacy versioned planner links keep their state on /design", async ({ page }) => {
+    await page.goto("/?v=1&starter=compact");
+    await expect(page).toHaveURL(/\/design\?v=1&starter=compact/);
+    await expect(page.getByRole("heading", { name: "Plan the enclosure" })).toBeVisible();
+  });
+
   for (const [route, heading] of routes) {
     test(`${route} is server-rendered with canonical metadata`, async ({ page }) => {
       const response = await page.goto(route);
       expect(response?.status()).toBe(200);
       await expect(page.getByRole("heading", { level: 1, name: new RegExp(heading, "i") })).toBeVisible();
       await expect(page.locator("link[rel='canonical']")).toHaveAttribute("href", new RegExp(`https://steamdesignpro\\.com${route}`));
+      if (route === "/design") {
+        await expect(page.locator("meta[property='og:type']")).toHaveAttribute("content", "website");
+        await expect(page.locator("meta[property='og:site_name']")).toHaveAttribute("content", "SteamDesignPro");
+        await expect(page.locator("meta[property='og:image']").first()).toHaveAttribute("content", "https://steamdesignpro.com/opengraph-image");
+        await expect(page.locator("meta[name='twitter:image']").first()).toHaveAttribute("content", "https://steamdesignpro.com/opengraph-image");
+      }
       const structured = await page.locator("script[type='application/ld+json']").allTextContents();
       expect(structured.length).toBeGreaterThan(0);
       structured.forEach((json) => expect(() => JSON.parse(json)).not.toThrow());
@@ -50,6 +92,7 @@ test.describe("crawlable routes and metadata", () => {
     const sitemapText = await sitemap.text();
     expect(sitemapText).toContain("https://steamdesignpro.com/kohler/k-32335-na");
     expect(sitemapText).toContain("https://steamdesignpro.com/steam-generator-sizing");
+    expect(sitemapText).toContain("https://steamdesignpro.com/design");
   });
 
   test("unknown routes return the custom 404 with a real 404 status", async ({ page }) => {

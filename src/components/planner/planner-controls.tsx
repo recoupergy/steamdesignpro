@@ -120,7 +120,7 @@ export function PlannerControls({ recommendation }: { recommendation: Manufactur
       <div className="controls-intro">
         <div>
           <p className="eyebrow">Room inputs</p>
-          <h2>Plan the enclosure</h2>
+          <h1>Plan the enclosure</h1>
         </div>
         <SelectField
           label="Starter"

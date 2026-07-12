@@ -35,7 +35,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
               >
                 Try again
               </button>
-              <Link className="button-link button-link--secondary" href="/">
+              <Link className="button-link button-link--secondary" href="/design">
                 Reload planner
               </Link>
             </div>

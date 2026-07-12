@@ -32,7 +32,7 @@ export default function KohlerCatalogPage() {
   };
   return (
     <main className="content-page catalog-page">
-      <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Planner</Link><span>/</span><span>KOHLER models</span></nav>
+      <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>KOHLER models</span></nav>
       <header className="content-hero">
         <p className="eyebrow">Manufacturer catalog • retrieved July 11, 2026</p>
         <h1>Current KOHLER Invigoration generator sequence</h1>
@@ -40,7 +40,7 @@ export default function KohlerCatalogPage() {
           SteamDesignPro’s first release supports exactly one manufacturer system: the current KOHLER Invigoration K-323xx sequence. It does not mix retired K-17xx/K-55xx generator rules into these records.
         </p>
         <div className="content-actions">
-          <Link href="/?v=1&starter=compact" className="content-primary-link">Open the planner</Link>
+          <Link href="/design?v=1&starter=compact" className="content-primary-link">Open the planner</Link>
           <a href={KOHLER_GENERATOR_CATALOG.catalogSource.sourceUrl} target="_blank" rel="noreferrer" className="content-secondary-link">
             Official selection guide <ExternalLink aria-hidden="true" />
           </a>

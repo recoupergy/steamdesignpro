@@ -53,7 +53,7 @@ async function waitForScene(page: Page) {
 test.describe("live steam-shower planner", () => {
   test.beforeEach(async ({ page }) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
-    await page.goto("/?v=1&starter=compact");
+    await page.goto("/design?v=1&starter=compact");
     await expect(page.getByRole("heading", { name: "Plan the enclosure" })).toBeVisible();
   });
 
@@ -100,7 +100,7 @@ test.describe("live steam-shower planner", () => {
     await width.blur();
     const visibleResult = testInfo.project.name === "mobile" ? page.locator(".mobile-result-peek") : page.locator(".results-rail");
     await expect(visibleResult.getByText("168.0 ft³", { exact: true })).toBeVisible();
-    await expect(page).toHaveURL(/\?v=1&s=/);
+    await expect(page).toHaveURL(/\/design\?v=1&s=/);
     await page.getByRole("button", { name: "Undo", exact: true }).click();
     await expect(width).toHaveValue("4");
     await page.getByRole("button", { name: "Redo", exact: true }).click();
@@ -129,7 +129,7 @@ test.describe("live steam-shower planner", () => {
   test("keeps the drawing toolbar inside a 320px viewport", async ({ page }, testInfo) => {
     test.skip(testInfo.project.name !== "mobile", "The minimum-width assertion runs once with mobile browser semantics.");
     await page.setViewportSize({ width: 320, height: 700 });
-    await page.goto("/?v=1&starter=compact");
+    await page.goto("/design?v=1&starter=compact");
     const toolbar = page.locator(".scene-viewport__toolbar");
     await expect(toolbar).toBeVisible();
     const toolbarBox = await toolbar.boundingBox();

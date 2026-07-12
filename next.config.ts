@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-  experimental: { inlineCss: true },
   async redirects() {
     return [
       {
@@ -11,6 +10,12 @@ const nextConfig: NextConfig = {
         has: [{ type: "host", value: "www.steamdesignpro.com" }],
         destination: "https://steamdesignpro.com/:path*",
         permanent: true,
+      },
+      {
+        source: "/",
+        has: [{ type: "query", key: "v", value: "1" }],
+        destination: "/design",
+        permanent: false,
       },
     ];
   },

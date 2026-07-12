@@ -246,7 +246,7 @@ export default function TermsPage() {
         </p>
       </section>
       <p className="policy-return">
-        <Link href="/?v=1&starter=compact">
+        <Link href="/design?v=1&starter=compact">
           Return to the compact starter plan
         </Link>
       </p>

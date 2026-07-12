@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-07-11T00:00:00.000Z");
   const routes = [
     "",
+    "/design",
     "/guide",
     "/kohler",
     "/steam-generator-sizing",
@@ -20,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}${route}`,
       lastModified,
       changeFrequency: route === "" ? ("weekly" as const) : ("monthly" as const),
-      priority: route === "" ? 1 : route === "/kohler" || route === "/steam-generator-sizing" ? 0.8 : 0.6,
+      priority: route === "" ? 1 : route === "/design" ? 0.9 : route === "/kohler" || route === "/steam-generator-sizing" ? 0.8 : 0.6,
     })),
     ...KOHLER_GENERATORS.map((generator) => ({
       url: `${base}/kohler/${generator.slug}`,

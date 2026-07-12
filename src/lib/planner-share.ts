@@ -11,5 +11,5 @@ export function encodePlannerState(state: PlannerState) {
 }
 
 export function sharePathForState(state: PlannerState) {
-  return `/?v=1&s=${encodeURIComponent(encodePlannerState(state))}`;
+  return `/design?v=1&s=${encodeURIComponent(encodePlannerState(state))}`;
 }

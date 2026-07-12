@@ -73,7 +73,7 @@ export default async function KohlerModelPage({ params }: ModelPageProps) {
 
   return (
     <main className="content-page model-page">
-      <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Planner</Link><span>/</span><Link href="/kohler">KOHLER models</Link><span>/</span><span>{generator.sku}</span></nav>
+      <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/kohler">KOHLER models</Link><span>/</span><span>{generator.sku}</span></nav>
       <header className="content-hero model-hero">
         <div>
           <p className="eyebrow">Current model record • source retrieved July 11, 2026</p>

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "SteamDesignPro browser-based steam shower planner";
+export const alt = "SteamDesignPro free 3D steam shower planner";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,9 +23,9 @@ export default function OpenGraphImage() {
           SteamDesignPro
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ color: "#087879", fontSize: 22, textTransform: "uppercase", letterSpacing: "0.12em" }}>Live planning workspace</div>
-          <div style={{ fontSize: 64, lineHeight: 1.03, fontWeight: 700, marginTop: 20 }}>Plan the enclosure. Size the system.</div>
-          <div style={{ fontSize: 24, color: "#4c6263", marginTop: 24 }}>3D + 2D planning for current KOHLER Invigoration steam systems.</div>
+          <div style={{ color: "#087879", fontSize: 22, textTransform: "uppercase", letterSpacing: "0.12em" }}>Free 3D steam-shower planner</div>
+          <div style={{ fontSize: 58, lineHeight: 1.01, fontWeight: 700, marginTop: 20 }}>See it before the tile goes up.</div>
+          <div style={{ fontSize: 24, color: "#4c6263", marginTop: 24 }}>Design the room, size the system, and share the plan.</div>
         </div>
       </div>
       <div style={{ flex: 1, marginLeft: 52, borderRadius: 20, background: "#dce8e8", border: "2px solid #b9cccc", display: "flex", alignItems: "flex-end", justifyContent: "center", overflow: "hidden", position: "relative" }}>

@@ -33,7 +33,7 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
           >
             Try this view again
           </button>
-          <Link className="button-link button-link--secondary" href="/">
+          <Link className="button-link button-link--secondary" href="/design">
             Return to planner
           </Link>
         </div>

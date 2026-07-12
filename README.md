@@ -1,6 +1,6 @@
 # SteamDesignPro
 
-SteamDesignPro.com is an independent, browser-based preliminary planning tool for steam-shower geometry and current KOHLER Invigoration equipment. It combines a measured 2D fallback, an on-demand Three.js room, source-linked sizing and accessory compatibility, versioned share URLs, and a deterministic PDF planning record.
+SteamDesignPro.com pairs a server-rendered product landing page with an independent browser-based planner for steam-shower geometry and current KOHLER Invigoration equipment. The designer combines a measured 2D fallback, an on-demand Three.js room, source-linked sizing and accessory compatibility, versioned share URLs, and a deterministic PDF planning record.
 
 It is owned and operated by SaunaShare, Inc. and is not affiliated with, endorsed, certified, or authorized by Kohler Co. The output is not construction or professional documentation.
 
@@ -22,7 +22,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open `http://localhost:3000`. No runtime secrets or external APIs are required.
+Open `http://localhost:3000` for the landing page or `http://localhost:3000/design` for the planner. No runtime secrets or external APIs are required.
 
 ## Verification
 
@@ -35,13 +35,14 @@ pnpm build
 pnpm test:e2e
 ```
 
-Playwright runs at 390×844 and 1440×900, checks the 2D and WebGL views, validates nonblank/moving canvas pixels, audits WCAG A/AA rules, exercises planner history/share/PDF behavior, and verifies the crawlable routes. Final production-mode Lighthouse is run against a local production server:
+Playwright runs at 390×844 and 1440×900, checks the landing page plus the 2D and WebGL designer, validates nonblank/moving canvas pixels, audits WCAG A/AA rules, exercises planner history/share/PDF behavior, and verifies the crawlable routes. Final production-mode Lighthouse is run against a local production server. The default URL audits the landing page; pass the designer URL and an artifact prefix to retain a separate planner report:
 
 ```bash
 pnpm build
 pnpm start --port 3108
 LIGHTHOUSE_MODE=mobile LIGHTHOUSE_URL=http://127.0.0.1:3108 pnpm lighthouse
 LIGHTHOUSE_MODE=desktop LIGHTHOUSE_URL=http://127.0.0.1:3108 pnpm lighthouse
+LIGHTHOUSE_MODE=mobile LIGHTHOUSE_URL='http://127.0.0.1:3108/design?v=1&starter=compact' LIGHTHOUSE_ARTIFACT_PREFIX=designer-mobile pnpm lighthouse
 ```
 
 Final screenshots, render counts, and Lighthouse summaries live in `artifacts/`. Raw reports, traces, and videos are intentionally ignored.

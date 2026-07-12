@@ -27,7 +27,7 @@ export default function NotFound() {
           in the current Kohler Invigoration source set.
         </p>
         <div className="status-page__actions">
-          <Link className="button-link button-link--primary" href="/">
+          <Link className="button-link button-link--primary" href="/design">
             Open the planner
           </Link>
           <Link className="button-link button-link--secondary" href="/kohler">
