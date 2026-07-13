@@ -1,6 +1,6 @@
 # SteamDesignPro
 
-SteamDesignPro.com pairs a server-rendered product landing page with an independent browser-based planner for steam-shower geometry and current KOHLER Invigoration equipment. The designer combines a measured 2D fallback, an on-demand Three.js room, source-linked sizing and accessory compatibility, versioned share URLs, and a deterministic PDF planning record.
+SteamDesignPro.com pairs a server-rendered product landing page with an independent browser-based planner for steam-shower geometry and current KOHLER Invigoration equipment. The designer combines a measured 2D fallback, an on-demand Three.js room, source-linked sizing and accessory compatibility, current KOHLER US list-price references, versioned share URLs, and a deterministic PDF planning record.
 
 It is owned and operated by SaunaShare, Inc. and is not affiliated with, endorsed, certified, or authorized by Kohler Co. The output is not construction or professional documentation.
 
@@ -55,8 +55,11 @@ Current normalized records and field-level provenance are checked into:
 
 - `data/kohler/generators.json`
 - `data/kohler/controls.json`
+- `data/kohler/pricing.json` — volatile US list-price references, retrieved separately from sizing rules
 - `data/kohler/rules.json`
 - `data/kohler/assets.json`
+
+The planner’s equipment budget is a component subtotal for the selected generator(s), drain pan(s), control or adapter, and any separately selected steam heads. It intentionally excludes tax, freight, dealer discounts, installation, electrical, plumbing, enclosure, tile, glass, and other project costs. Re-check the linked KOHLER product pages before ordering.
 
 See `docs/research-report.md` for the source reconciliation, `docs/asset-sources.md` for the asset/license audit, and `docs/verification.md` for the release evidence.
 

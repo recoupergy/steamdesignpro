@@ -21,6 +21,7 @@ test.describe("crawlable routes and metadata", () => {
     expect(response?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1, name: /see your steam shower before the tile goes up/i })).toBeVisible();
     await expect(page.getByRole("link", { name: /design now/i }).first()).toHaveAttribute("href", "/design");
+    await expect(page.getByText("$3,225.00", { exact: false }).first()).toBeVisible();
     await expect(page.locator("link[rel='canonical']")).toHaveAttribute("href", "https://steamdesignpro.com");
     await expect(page.locator("meta[property='og:type']")).toHaveAttribute("content", "website");
     await expect(page.locator("meta[property='og:site_name']")).toHaveAttribute("content", "SteamDesignPro");

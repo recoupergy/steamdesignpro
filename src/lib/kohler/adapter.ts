@@ -1,6 +1,7 @@
 import type { ManufacturerAdapter, SpecificationItem } from "@/lib/manufacturer-adapter";
 import type { PlannerState } from "@/lib/planner-schema";
 import { resolveKohlerAccessoryPackage } from "./controls";
+import { getKohlerPrice, KOHLER_PRICING } from "./pricing";
 import { sizeKohlerGenerator } from "./sizing";
 
 export const KOHLER_ADAPTER: ManufacturerAdapter = {
@@ -32,14 +33,25 @@ export const KOHLER_ADAPTER: ManufacturerAdapter = {
     }
 
     const items: SpecificationItem[] = [];
-    if (generator) {
+    const addItem = (item: Omit<SpecificationItem, "unitPriceUsd" | "extendedPriceUsd" | "priceSourceUrl" | "priceIsReference" | "productUrl">) => {
+      const price = getKohlerPrice(item.sku);
       items.push({
+        ...item,
+        productUrl: price?.record.productUrl,
+        unitPriceUsd: price?.record.priceUsd ?? null,
+        extendedPriceUsd: price ? price.record.priceUsd * item.quantity : null,
+        priceSourceUrl: price?.record.priceSourceUrl,
+        priceIsReference: price?.isReference ?? false,
+      });
+    };
+    if (generator) {
+      addItem({
         sku: generator.sku,
         name: generator.name,
         quantity: 1,
         sourceUrl: generator.specUrl,
       });
-      items.push({
+      addItem({
         sku: generator.drainPanSku,
         name: `${generator.drainPanStatus === "required" ? "Required" : "Recommended"} drain pan`,
         quantity: generator.drainPans,
@@ -50,14 +62,14 @@ export const KOHLER_ADAPTER: ManufacturerAdapter = {
       });
     }
     if (resolved) {
-      items.push({
+      addItem({
         sku: `${resolved.control.sku}-${resolved.selectedFinish}`,
         name: resolved.control.name,
         quantity: 1,
         sourceUrl: resolved.control.specUrl,
       });
       if (resolved.steamHead) {
-        items.push({
+        addItem({
           sku: `${resolved.steamHead.sku}-${resolved.selectedFinish}`,
           name: resolved.steamHead.name,
           quantity: resolved.separateSteamHeads,
@@ -65,6 +77,9 @@ export const KOHLER_ADAPTER: ManufacturerAdapter = {
         });
       }
     }
+
+    const pricedItems = items.filter((item) => item.extendedPriceUsd !== null);
+    const pricingComplete = items.length > 0 && pricedItems.length === items.length;
 
     return {
       ...sizing,
@@ -82,6 +97,14 @@ export const KOHLER_ADAPTER: ManufacturerAdapter = {
             items,
           }
         : null,
+      pricing: {
+        currency: "USD",
+        subtotalUsd: pricingComplete ? pricedItems.reduce((sum, item) => sum + (item.extendedPriceUsd ?? 0), 0) : null,
+        complete: pricingComplete,
+        retrievedAt: KOHLER_PRICING.retrievedAt,
+        basis: KOHLER_PRICING.basis,
+        sourceUrl: KOHLER_PRICING.sourceUrl,
+      },
       needsManufacturerReview: sizing.needsManufacturerReview || !resolved,
       warnings,
     };

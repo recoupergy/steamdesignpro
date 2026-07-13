@@ -2,6 +2,8 @@ import { AlertTriangle, CheckCircle2, CircleAlert, ExternalLink, Info } from "lu
 import type { ManufacturerRecommendation } from "@/lib/manufacturer-adapter";
 import type { PlannerState } from "@/lib/planner-schema";
 import { FINISH_LABELS } from "@/lib/kohler/controls";
+import { KOHLER_RULES } from "@/lib/kohler/catalog";
+import { formatUsd } from "@/lib/kohler/pricing";
 import { GeneratorDiagram } from "./generator-diagram";
 
 function WarningIcon({ severity }: { severity: "information" | "caution" | "stop" }) {
@@ -57,6 +59,43 @@ export function RecommendationSummary({
         </div>
       </dl>
 
+      <section className="price-summary" aria-labelledby="price-summary-title">
+        <div className="price-summary-header">
+          <div>
+            <p className="eyebrow">Equipment budget</p>
+            <h3 id="price-summary-title">KOHLER list-price reference</h3>
+          </div>
+          <strong>{recommendation.pricing.subtotalUsd === null ? "—" : formatUsd(recommendation.pricing.subtotalUsd)}</strong>
+        </div>
+        <p className="price-summary-lede">
+          {recommendation.pricing.complete ? "Priced steam-system components for this configuration." : "Some components do not have a current price reference."} Retrieved {recommendation.pricing.retrievedAt}.
+        </p>
+        <p className="price-summary-note">
+          {recommendation.pricing.basis} {accessory?.items.some((item) => item.priceIsReference) ? "Accessory pricing uses the Polished Chrome (CP) reference because finish-specific prices vary." : ""}
+        </p>
+        <a className="price-summary-source" href={recommendation.pricing.sourceUrl} target="_blank" rel="noreferrer">
+          Verify current prices on KOHLER <ExternalLink aria-hidden="true" />
+        </a>
+      </section>
+
+      {generator ? (
+        <section className="product-facts" aria-labelledby="product-facts-title">
+          <div className="section-heading-row">
+            <h3 id="product-facts-title">Selected system facts</h3>
+            <span>{generator.configuration === "tandem" ? "Tandem" : "Single"}</span>
+          </div>
+          <dl className="product-facts-grid">
+            <div><dt>Published capacity</dt><dd>Up to {generator.maxVolumeCuFt.toLocaleString("en-US")} ft³</dd></div>
+            <div><dt>Generator assembly</dt><dd>{generator.componentGeneratorCount} × {generator.componentGeneratorSku}</dd></div>
+            <div><dt>Steam heads</dt><dd>{generator.steamHeads} required</dd></div>
+            <div><dt>Service access</dt><dd>24 × 15 in minimum panel</dd></div>
+          </dl>
+          <p className="product-facts-note">
+            Plan at least {KOHLER_RULES.generatorClearanceInches} in around the generator on three sides and keep the routed steam line within {KOHLER_RULES.maxGeneratorToSteamHeadFt} ft. Confirm the exact installation sheet and local requirements before rough-in.
+          </p>
+        </section>
+      ) : null}
+
       <section className="specification-list" aria-labelledby="specification-title">
         <h3 id="specification-title">Current specification</h3>
         {accessory?.items.map((item) => (
@@ -65,6 +104,14 @@ export function RecommendationSummary({
             <div>
               <strong>{item.sku}</strong>
               <span>{item.name}</span>
+              <span className="specification-price">
+                {item.extendedPriceUsd === null
+                  ? "Price unavailable"
+                  : `${formatUsd(item.extendedPriceUsd)}${item.quantity > 1 ? ` (${formatUsd(item.unitPriceUsd ?? 0)} each)` : ""}`}
+              </span>
+              <a className="specification-source" href={item.productUrl ?? item.sourceUrl} target="_blank" rel="noreferrer">
+                KOHLER product page <ExternalLink aria-hidden="true" />
+              </a>
             </div>
             <a href={item.sourceUrl} target="_blank" rel="noreferrer" aria-label={`Open official source for ${item.sku}`}>
               <ExternalLink aria-hidden="true" />

@@ -1,5 +1,6 @@
 import { PDFDocument, StandardFonts, rgb, type PDFFont, type PDFPage } from "pdf-lib";
 import type { ManufacturerRecommendation } from "@/lib/manufacturer-adapter";
+import { formatUsd } from "@/lib/kohler/pricing";
 import { feetToInputDistance, type PlannerState } from "@/lib/planner-schema";
 
 export interface ProjectExportInput {
@@ -186,6 +187,13 @@ export async function createProjectPdf({ state, recommendation, snapshotDataUrl 
   for (const item of recommendation.accessoryPackage?.items ?? []) {
     overview.drawText(`${item.quantity} × ${item.sku}`, { x: 44, y: overviewY, size: 9, font: bold, color: ink });
     overviewY = drawWrapped(overview, item.name, regular, 8, 154, overviewY, 390, muted, 11) - 6;
+  }
+  if (recommendation.pricing.subtotalUsd !== null) {
+    overviewY = Math.min(overviewY - 4, 222);
+    overview.drawText("EQUIPMENT LIST PRICE REFERENCE", { x: 44, y: overviewY, size: 8, font: bold, color: teal });
+    overview.drawText(formatUsd(recommendation.pricing.subtotalUsd), { x: 44, y: overviewY - 17, size: 13, font: bold, color: ink });
+    overview.drawText("KOHLER US list-price reference; installation excluded", { x: 132, y: overviewY - 15, size: 7, font: regular, color: muted });
+    overviewY -= 33;
   }
   overviewY = Math.min(overviewY - 4, 190);
   overview.drawText("EARLY COORDINATION FLAGS", { x: 44, y: overviewY, size: 8, font: bold, color: teal });

@@ -36,6 +36,20 @@ export interface SpecificationItem {
   name: string;
   quantity: number;
   sourceUrl: string;
+  productUrl?: string | undefined;
+  unitPriceUsd: number | null;
+  extendedPriceUsd: number | null;
+  priceSourceUrl?: string | undefined;
+  priceIsReference?: boolean | undefined;
+}
+
+export interface PricingSummary {
+  currency: "USD";
+  subtotalUsd: number | null;
+  complete: boolean;
+  retrievedAt: string;
+  basis: string;
+  sourceUrl: string;
 }
 
 export interface AccessoryPackage {
@@ -59,6 +73,7 @@ export interface ManufacturerRecommendation {
   fractionalCeilingReview: boolean;
   needsManufacturerReview: boolean;
   accessoryPackage: AccessoryPackage | null;
+  pricing: PricingSummary;
   warnings: PlanningWarning[];
 }
 

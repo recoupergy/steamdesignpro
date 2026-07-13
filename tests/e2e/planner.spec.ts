@@ -94,6 +94,10 @@ test.describe("live steam-shower planner", () => {
   });
 
   test("updates dimensions, recommendation, URL state, and history", async ({ page }, testInfo) => {
+    if (testInfo.project.name === "mobile") await page.getByRole("button", { name: /Results/ }).click();
+    await expect(page.locator(".results-rail").getByRole("heading", { name: "KOHLER list-price reference" })).toBeVisible();
+    await expect(page.locator(".results-rail").getByText("$3,822.41", { exact: true })).toBeVisible();
+    if (testInfo.project.name === "mobile") await page.getByRole("button", { name: /Design/ }).click();
     const width = page.locator(".dimension-grid").first().getByLabel("Width");
     await expect(width).toHaveValue("4");
     await width.fill("6");

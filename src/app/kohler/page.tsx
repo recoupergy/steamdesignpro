@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { KOHLER_GENERATOR_CATALOG, KOHLER_GENERATORS } from "@/lib/kohler/catalog";
+import { formatUsd, getKohlerPrice, KOHLER_PRICING } from "@/lib/kohler/pricing";
 
 export const metadata: Metadata = {
   title: "Current KOHLER Invigoration Steam Generators",
@@ -34,7 +35,7 @@ export default function KohlerCatalogPage() {
     <main className="content-page catalog-page">
       <nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span>KOHLER models</span></nav>
       <header className="content-hero">
-        <p className="eyebrow">Manufacturer catalog • retrieved July 11, 2026</p>
+        <p className="eyebrow">Manufacturer catalog • pricing reviewed {KOHLER_PRICING.retrievedAt}</p>
         <h1>Current KOHLER Invigoration generator sequence</h1>
         <p className="content-lede">
           SteamDesignPro’s first release supports exactly one manufacturer system: the current KOHLER Invigoration K-323xx sequence. It does not mix retired K-17xx/K-55xx generator rules into these records.
@@ -51,8 +52,8 @@ export default function KohlerCatalogPage() {
         <h2 id="catalog-table-title">Published sizing and electrical data</h2>
         <div className="responsive-table-wrap">
           <table>
-            <caption>KOHLER Invigoration K-323xx models in increasing published maximum volume order.</caption>
-            <thead><tr><th scope="col">Model</th><th scope="col">Power</th><th scope="col">Maximum volume</th><th scope="col">Configuration</th><th scope="col">Dedicated service</th></tr></thead>
+            <caption>KOHLER Invigoration K-323xx models in increasing published maximum volume order. Prices are US list-price references retrieved {KOHLER_PRICING.retrievedAt}.</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">Power</th><th scope="col">Maximum volume</th><th scope="col">Configuration</th><th scope="col">Dedicated service</th><th scope="col">List price ref.</th></tr></thead>
             <tbody>
               {KOHLER_GENERATORS.map((generator) => (
                 <tr key={generator.sku}>
@@ -61,6 +62,7 @@ export default function KohlerCatalogPage() {
                   <td>{generator.maxVolumeCuFt.toLocaleString("en-US")} ft³</td>
                   <td>{generator.configuration === "tandem" ? `Tandem (${generator.componentGeneratorCount} × ${generator.componentGeneratorSku})` : "Single"}</td>
                   <td>{generator.dedicatedCircuits} × 240 V / {generator.requiredCircuitAmps} A</td>
+                  <td>{getKohlerPrice(generator.sku) ? formatUsd(getKohlerPrice(generator.sku)!.record.priceUsd) : "—"}</td>
                 </tr>
               ))}
             </tbody>
@@ -75,6 +77,8 @@ export default function KohlerCatalogPage() {
         </p>
         <Link href="/steam-generator-sizing">See the calculation and exact boundary behavior</Link>
       </section>
+
+      <p className="catalog-price-note">Prices are displayed as KOHLER US list-price references for planning only. Verify the live product page before ordering; dealer pricing, availability, tax, freight, and installation are not included.</p>
 
       <aside className="planning-notice">
         <strong>Independent planning notice.</strong> SteamDesignPro is operated by SaunaShare, Inc. and is not affiliated with, endorsed, certified, or authorized by Kohler Co. Current KOHLER documents, local code, project professionals, and the authority having jurisdiction control final decisions.

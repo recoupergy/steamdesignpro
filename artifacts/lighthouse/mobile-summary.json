@@ -1,19 +1,19 @@
 {
   "url": "http://127.0.0.1:3108/",
   "mode": "mobile",
-  "generatedAt": "2026-07-12T00:51:28.546Z",
+  "generatedAt": "2026-07-13T02:49:07.566Z",
   "scores": {
-    "performance": 98,
+    "performance": 97,
     "accessibility": 100,
     "bestPractices": 100,
     "seo": 100
   },
   "metrics": {
-    "firstContentfulPaintMs": 912.9961000000001,
-    "largestContentfulPaintMs": 2326.49415,
-    "totalBlockingTimeMs": 7,
+    "firstContentfulPaintMs": 906.4231,
+    "largestContentfulPaintMs": 2506.63465,
+    "totalBlockingTimeMs": 47,
     "cumulativeLayoutShift": 0,
-    "speedIndexMs": 912.9961000000001
+    "speedIndexMs": 906.4231
   },
   "note": "Lighthouse is a lab test. Total Blocking Time is reported as an interactivity proxy; field INP requires real-user measurement."
 }

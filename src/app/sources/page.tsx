@@ -40,7 +40,7 @@ const sourceRecords = [
     usedFor:
       "Current commercial listing of the ten K-323xx Invigoration generator models.",
     caution:
-      "Prices and availability are intentionally not reproduced in SteamDesignPro because they can change and are not needed for preliminary sizing.",
+      "SteamDesignPro displays the current list-price references from this catalog for budget planning. Prices, dealer availability, tax, freight, and installation can change and must be verified before ordering.",
   },
   {
     title: "Steam Generator (5 kW–11 kW) installation instructions",

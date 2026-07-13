@@ -1,12 +1,12 @@
 # Release verification
 
-Verified against the production-mode build on 2026-07-11.
+Verified against the production-mode build on 2026-07-12.
 
 | Check | Result |
 | --- | --- |
 | ESLint | Passed with zero warnings |
 | TypeScript | Strict typecheck passed |
-| Vitest | 58 tests passed across 6 files |
+| Vitest | 61 tests passed across 7 files |
 | Asset/license audit | Passed; 4 restricted official records documented and no prohibited CAD/mesh packages in `public/` |
 | Next.js production build | Passed; 27 routes rendered or statically generated |
 | Playwright | 43 passed, 3 intentional device-specific skips, 0 failed at 390×844 and 1440×900 |
@@ -19,9 +19,11 @@ Verified against the production-mode build on 2026-07-11.
 
 | Profile | Performance | Accessibility | Best Practices | SEO | FCP | LCP | TBT | CLS |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Mobile landing | 98 | 100 | 100 | 100 | 913 ms | 2,326 ms | 7 ms | 0 |
-| Desktop landing | 86 | 100 | 100 | 100 | 905 ms | 2,462 ms | 4 ms | 0 |
+| Mobile landing | 97 | 100 | 100 | 100 | 906 ms | 2,507 ms | 47 ms | 0 |
+| Desktop landing | 85 | 100 | 100 | 100 | 906 ms | 2,520 ms | 61 ms | 0 |
 
 Lighthouse is a repeatable lab check, not field Core Web Vitals. Total Blocking Time is the available lab interactivity proxy; the requested 75th-percentile INP target requires real-user monitoring after launch.
+
+The richer pricing and product-detail content keeps accessibility, best practices, and SEO at 100; the local Lighthouse LCP gate is currently borderline at roughly 2.5 seconds and should be rechecked on the deployed host.
 
 Evidence is checked into `artifacts/lighthouse/` and `artifacts/screenshots/`. Raw Lighthouse reports, Playwright traces, and videos are ignored to keep the repository focused.

@@ -12,6 +12,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { SteamRoomPreview } from "@/components/landing/steam-room-preview";
+import { formatUsd, KOHLER_PRICING } from "@/lib/kohler/pricing";
 
 export const metadata: Metadata = {
   title: { absolute: "SteamDesignPro | Free 3D Steam Shower Planner" },
@@ -80,6 +81,8 @@ const professionalsFinalize = [
 ] as const;
 
 export default function Home() {
+  const startingGeneratorPrice = KOHLER_PRICING.products.find((product) => product.sku === "K-32324-NA")?.priceUsd ?? 0;
+  const nineKwGeneratorPrice = KOHLER_PRICING.products.find((product) => product.sku === "K-32326-NA")?.priceUsd ?? 0;
   const softwareApplication = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -97,6 +100,7 @@ export default function Home() {
       "US and metric dimensions",
       "Current KOHLER Invigoration generator sizing",
       "Controller and steam-head compatibility validation",
+      "Current KOHLER US list-price references",
       "Versioned share links and four-page PDF planning record",
     ],
   };
@@ -138,7 +142,7 @@ export default function Home() {
       <section className="landing-proof" aria-label="Planner capabilities">
         <div className="landing-shell landing-proof__grid">
           <div><Box aria-hidden="true" /><p><strong>3D + 2D</strong><span>Live room, plan, and elevation</span></p></div>
-          <div><Gauge aria-hidden="true" /><p><strong>Current models</strong><span>KOHLER K-323xx sizing</span></p></div>
+          <div><Gauge aria-hidden="true" /><p><strong>Current pricing</strong><span>From {formatUsd(startingGeneratorPrice)} list ref.</span></p></div>
           <div><CircuitBoard aria-hidden="true" /><p><strong>Live checks</strong><span>Equipment, route, and placement</span></p></div>
           <div><FileText aria-hidden="true" /><p><strong>4-page PDF</strong><span>Inputs, specification, sources, limits</span></p></div>
         </div>
@@ -229,6 +233,7 @@ export default function Home() {
               <div><dt>Published maximum</dt><dd>240 ft³</dd></div>
               <div><dt>Ceiling adjustment</dt><dd>0 sizes</dd></div>
               <div><dt>Electrical discussion</dt><dd>240 V / 60 A</dd></div>
+              <div><dt>Generator list price</dt><dd>{formatUsd(nineKwGeneratorPrice)} <span>US reference</span></dd></div>
             </dl>
             <p className="landing-sizing__note"><ShieldCheck aria-hidden="true" /> Direct source links travel with the result.</p>
           </div>
@@ -353,6 +358,10 @@ export default function Home() {
             <details>
               <summary>Which equipment does it size today?</summary>
               <p>The current release documents KOHLER Invigoration K-323xx generators and compatible control and steam-head paths from cited primary sources.</p>
+            </details>
+            <details>
+              <summary>Does it show real equipment pricing?</summary>
+              <p>Yes. The designer shows a current KOHLER US list-price reference for the generator, drain pan, control or adapter, and steam head package it selects. Tax, freight, installation, electrical, plumbing, enclosure, and dealer pricing are separate.</p>
             </details>
             <details>
               <summary>What does the PDF include?</summary>

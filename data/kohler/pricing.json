@@ -1,0 +1,150 @@
+{
+  "manufacturer": "KOHLER",
+  "market": "US",
+  "retrievedAt": "2026-07-12",
+  "currency": "USD",
+  "basis": "KOHLER-displayed list price reference. Excludes tax, freight, installation, electrical, plumbing, tile, glass, and other project costs.",
+  "sourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering?facets=Collections%3AInvigoration",
+  "products": [
+    {
+      "sku": "K-32324-NA",
+      "name": "5 kW steam generator",
+      "priceUsd": 2524.5,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-5-kw-steam-generator-32324",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32325-NA",
+      "name": "7 kW steam generator",
+      "priceUsd": 2850,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-7-kw-steam-generator-32325",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32326-NA",
+      "name": "9 kW steam generator",
+      "priceUsd": 3225,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-9-kw-steam-generator-32326",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32327-NA",
+      "name": "11 kW steam generator",
+      "priceUsd": 3487.5,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-11-kw-steam-generator-32327",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32328-NA",
+      "name": "13 kW steam generator",
+      "priceUsd": 3965.25,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-13-kw-steam-generator-32328",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32329-NA",
+      "name": "15 kW steam generator",
+      "priceUsd": 4237.5,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-15-kw-steam-generator-32329",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32332-NA",
+      "name": "18 kW tandem steam generator",
+      "priceUsd": 6321,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-18-kw-steam-generator-32332",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32333-NA",
+      "name": "22 kW tandem steam generator",
+      "priceUsd": 6522,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-22-kw-steam-generator-32333",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32334-NA",
+      "name": "26 kW tandem steam generator",
+      "priceUsd": 7296,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-26-kw-steam-generator-32334",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-32335-NA",
+      "name": "30 kW tandem steam generator",
+      "priceUsd": 8000.25,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-30-kw-steam-generator-32335?skuId=32335-NA",
+      "priceSourceUrl": "https://www.kohler.com/en/shop/steam-generators-for-home-use"
+    },
+    {
+      "sku": "K-5559-NA",
+      "name": "Small drain pan",
+      "priceUsd": 159.12,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-small-drain-pan-5559",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-drain-pans-steam-showering"
+    },
+    {
+      "sku": "K-5562-NA",
+      "name": "Large drain pan",
+      "priceUsd": 159.12,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-large-drain-pan-5562",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-drain-pans-steam-showering"
+    },
+    {
+      "sku": "K-5557-CP",
+      "name": "Steam generator control kit",
+      "priceUsd": 813.29,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-steam-generator-control-kit-5557?skuId=5557-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-control-kits-steam-showering"
+    },
+    {
+      "sku": "K-5558-CP",
+      "name": "Tandem steam generator control kit",
+      "priceUsd": 1047.28,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-tandem-steam-generator-control-kit-5558?skuId=5558-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-control-kits-steam-showering"
+    },
+    {
+      "sku": "K-32312-CP",
+      "name": "Steam controller",
+      "priceUsd": 599.16,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-steam-controller-32312?skuId=32312-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-control-kits-steam-showering"
+    },
+    {
+      "sku": "K-5548-K1-CP",
+      "name": "Digital steam adapter kit",
+      "priceUsd": 809.47,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-digital-steam-adapter-kit-5548-k1-5548-k1?skuId=5548-K1-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering"
+    },
+    {
+      "sku": "K-5549-K1-CP",
+      "name": "Tandem digital steam adapter kit",
+      "priceUsd": 1033.93,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-tandem-digital-steam-adapter-kit-5549-k1-5549-k1?skuId=5549-K1-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering"
+    },
+    {
+      "sku": "K-32311-CP",
+      "name": "Digital steam adapter",
+      "priceUsd": 595.33,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-digital-steam-adapter-32311?skuId=32311-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering"
+    },
+    {
+      "sku": "K-32309-CP",
+      "name": "Linear steam head",
+      "priceUsd": 624.57,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-linear-steam-head-32309?skuId=32309-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering"
+    },
+    {
+      "sku": "K-32310-CP",
+      "name": "Square steam head",
+      "priceUsd": 214.14,
+      "productUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering/invigoration-series-square-steam-head-32310?skuId=32310-CP",
+      "priceSourceUrl": "https://www.kohler.com/en/products/showers/shop-steam-showering"
+    }
+  ]
+}
